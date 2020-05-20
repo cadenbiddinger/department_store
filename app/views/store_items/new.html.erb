@@ -1,2 +1,6 @@
-<h1>StoreItems#new</h1>
-<p>Find me in app/views/store_items/new.html.erb</p>
+<h1>Add New Store Item </h1>
+<%= form_for @store_item do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>

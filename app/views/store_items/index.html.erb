@@ -4,9 +4,9 @@
   <% @store_items.each do |store_item| %>
     <li><%= link_to store_item.name %></li>
 
-    <%= link_to 'Show Item', store_item_path(department)%>
-    <%= link_to 'Edit Item', edit_store_item_path(department)%>
-    <%= link_to 'Delete Item', store_item, method: :delete %>
+    <%# <%= link_to 'Show Item', store_item_path(department)%>
+    <%# <%= link_to 'Edit Item', edit_store_item_path(department)%>
+    <%# <%= link_to 'Delete Item', store_item, method: :delete %> 
   <% end %>
    
 </ul>
