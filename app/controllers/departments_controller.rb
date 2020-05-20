@@ -1,7 +1,7 @@
 class DepartmentsController < ApplicationController
 
   def index
-    @departments = Departments.all
+    @departments = Department.all
   end
 
   def show
@@ -15,18 +15,33 @@ class DepartmentsController < ApplicationController
   def create
     @department = Department.new(departments_params)
     if @department.save
-      redirect_to 
+      redirect_to departments_path
+    else
+      render :new
+    end
   end
-
 
   def edit
     @department = Department.find(params[:id])
   end
 
   def update
+    @department = Department.find(params[:id])
+    if(@department.update(departments_params))
+      redirect_to departments_params
+    else
+      render :edit
+    end
   end
 
   def destroy
+    Department.find(params[:id]).destroy
+    # @department.destroy
+    redirect_to departments_path
   end
 
+  private
+  def departments_params
+    params.require(:department).permit(:name)
+  end
 end
