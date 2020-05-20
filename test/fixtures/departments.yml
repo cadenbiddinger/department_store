@@ -1,13 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  index: MyString
-  show: MyString
-  new: MyString
-  edit: MyString
+  name: MyString
 
 two:
-  index: MyString
-  show: MyString
-  new: MyString
-  edit: MyString
+  name: MyString
